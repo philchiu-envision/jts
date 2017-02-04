@@ -149,6 +149,19 @@
           </configuration>
         </plugin>
 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.6.1</version>
+          <configuration>
+            <source>${ver_java_source}<source>
+            <target>${ver_java_target}<target>
+            <compilerArgs>
+              <arg>-bootclasspath ${path_to_rt_jar}</arg>
+            </compilerArgs>
+          </configuration>
+        </plugin>
+
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-javadoc-plugin</artifactId>
